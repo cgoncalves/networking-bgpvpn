@@ -59,6 +59,26 @@ class BGPVPNRDNotSupported(n_exc.BadRequest):
                 "route distinguisher")
 
 
+class BGPVPNRTNotSupported(n_exc.BadRequest):
+    message = _("BGPVPN %(driver)s driver does not support to manually set "
+                "route targets")
+
+
+class BGPVPNITNotSupported(n_exc.BadRequest):
+    message = _("BGPVPN %(driver)s driver does not support to manually set "
+                "import targets")
+
+
+class BGPVPNLocalPrefNotSupported(n_exc.BadRequest):
+    message = _("BGPVPN %(driver)s driver does not support to manually set "
+                "local pref")
+
+
+class BGPVPNETNotSupported(n_exc.BadRequest):
+    message = _("BGPVPN %(driver)s driver does not support to manually set "
+                "export targets")
+
+
 class BGPVPNFindFromNetNotSupported(n_exc.BadRequest):
     message = _("BGPVPN %(driver)s driver does not support to fetch BGPVPNs "
                 "associated to network id %(net_id)")
